@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HomePage from "./Pages/HomePage/HomePage";
 
 function App() {
+  //   `http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=73e6239d34fb2189a11ecddcd2f211e5`
+  // `https://api.openweathermap.org/data/2.5/forecast?q=Pakistan,Faisalabad&appid=73e6239d34fb2189a11ecddcd2f211e5`
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='appParent'>
+      <HomePage />
     </div>
   );
 }

@@ -1,0 +1,33 @@
+.P1 {
+  width: 100%;
+}
+
+.P2 {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin: 3rem auto;
+}
+
+@media (max-width:450px) {
+  .P2 {
+    flex-direction: column;
+  }
+}
+
+.P2 input {
+  padding: 0.4rem 1rem;
+  border-radius: 7px;
+  border: 0;
+  outline: 0;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 275;
+  letter-spacing: 0em;
+  text-align: center;
+  background: linear-gradient(108.5deg, #3a5e72 4.95%, #5c93b1 132.43%);
+  color: white !important;
+}

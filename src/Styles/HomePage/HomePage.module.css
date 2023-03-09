@@ -1,0 +1,25 @@
+.P {
+  background: #1b262c;
+  padding: 2rem 0px;
+  width: 100%;
+}
+
+.P > p:nth-child(2) {
+  color: white;
+  font-family: "Poppins";
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 0px 3rem;
+  margin-top: 4rem;
+}
+
+.P > p:nth-child(2) span {
+  color: white;
+  font-family: "Poppins";
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+}

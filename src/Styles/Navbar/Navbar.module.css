@@ -1,0 +1,64 @@
+.P {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b262c;
+  padding: 0.5rem 1rem;
+  gap: 2rem;
+  width: 100%;
+  margin: auto;
+}
+
+.P > * {
+  flex: 1;
+  text-align: center;
+}
+
+.P > div:nth-child(1) {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: white;
+}
+
+.P > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 300;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media (max-width: 620px) {
+  .P > div:nth-child(2) {
+    display: none;
+    flex: 0;
+  }
+  .P {
+    justify-content: space-between;
+  }
+  .P > div:nth-child(1) {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;
+    color: white;
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .P > div:nth-child(3) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
