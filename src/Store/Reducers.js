@@ -4,23 +4,43 @@ import { combineReducers } from "redux";
 
 const searchQ = createSlice({
   name: "searchQ",
-  initialState: {},
+  initialState: '',
   reducers: {
     updateQData: (state, action) => {
       return action.payload
     }
   },
 });
-const slice1 = createSlice({
-  name: "slice1",
-  initialState: [],
-  reducers: {},
+
+const tempInC = createSlice({
+  name: "tempInC",
+  initialState: true,
+  reducers: {
+    checker: (state, action) => {
+      return action.payload
+    }
+  },
 });
 
+const forecast = createSlice({
+  name: "forecast",
+  initialState: {},
+  reducers: {
+    updateForecast: (state, action) => {
+      return action.payload
+    }
+  },
+});
+
+
+
 export default combineReducers({
-  slice1: slice1.reducer,
+  tempInC: tempInC.reducer,
   searchQ: searchQ.reducer,
+  forecast:forecast.reducer
 });
 
 
 export const { updateQData } = searchQ.actions
+export const { checker } = tempInC.actions
+export const { updateForecast } = forecast.actions

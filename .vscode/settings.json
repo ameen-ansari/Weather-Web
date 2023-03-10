@@ -34,7 +34,7 @@
         "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     "window.zoomLevel": 0
 }
 
