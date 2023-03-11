@@ -1,20 +1,8 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import style from "./Switch.module.css";
-import { getForecastData, tempInCChecker } from "../../Store/Reducers";
+import useSwitch from "../../Hooks/useSwitch";
 
 function Switch() {
-  let searchQ = useSelector((store) => store.reducers.searchQ);
-  let dispatch = useDispatch();
-  const handleChange = async (e) => {
-    if (e.target.checked) {
-      dispatch(tempInCChecker(false));
-      dispatch(getForecastData({ userInput: searchQ, unit: "imperial" }));
-    } else {
-      dispatch(tempInCChecker(true));
-      dispatch(getForecastData({ userInput: searchQ, unit: "metric" }));
-    }
-  };
+  const { handleChange } = useSwitch();
 
   return (
     <div className={style.P}>

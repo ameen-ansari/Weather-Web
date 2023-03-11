@@ -6,10 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import img from "../../Images/IMG (2).png";
 
 export default class SimpleSlider extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const settings = {
       dots: false,

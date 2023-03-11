@@ -1,38 +1,9 @@
-import React, { useState } from "react";
 import Button from "../Button/Button";
 import style from "../../Styles/Form/Form.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  getForecastData,
-  updateForecast,
-  updateQData,
-} from "../../Store/Reducers";
-import axios from "axios";
+import useForm from "../../Hooks/useForm";
 
 function Form() {
-  const [unit, setUnit] = useState("metric");
-  let dispatch = useDispatch();
-  let store = useSelector((store) => store.reducers);
-  // let store = useSelector((store) => store.reducers);
-  const [userInput, setUserInput] = useState({
-    country: 'Pakistan',
-    city: 'Faisalabad'
-  });
-  let inputH = (e) => {
-    let inputs = { [e.target.name]: e.target.value };
-    setUserInput({
-      ...userInput,
-      ...inputs,
-    });
-  };
-  let Submit = async () => {
-    dispatch(updateQData(userInput));
-    if (store.tempInC) {
-      dispatch(getForecastData({userInput:userInput ,unit:'metric'}));
-    } else {
-      dispatch(getForecastData({userInput:userInput ,unit: 'imperial'}));
-    }
-  };
+  const { inputH, Submit, userInput } = useForm();
   return (
     <div className={style.P1}>
       <div className={style.P2}>
