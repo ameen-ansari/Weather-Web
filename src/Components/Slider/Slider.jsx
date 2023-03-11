@@ -41,16 +41,16 @@ export default class SimpleSlider extends Component {
     return (
       <div className={style.parent}>
         <Slider {...settings}>
-          {this.props.data.list?.map((forecast, i) => {
+          {this.props.data.forecast.list?.map((forecast, i) => {
             return (
               <div key={i} className={style.card}>
                 <p>{forecast.dt_txt}</p>
                 <img className={style.img} alt="img" src={img} />
                 <p>
-                  <span>{this.props.data.city.name}, {this.props.data.city.country}</span>
+                  <span>{this.props.data.forecast.city.name}, {this.props.data.forecast.city.country}</span>
                 </p>
                 <p>
-                  <span>Temp</span> {forecast.main.temp_max}
+                  <span>Temp</span> {forecast.main.temp_max} {this.props.data.tempInC?'°C':'°F'}
                 </p>
                 <p>
                   <span>{forecast.weather[0].description}</span>

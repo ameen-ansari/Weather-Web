@@ -7,7 +7,7 @@ import Switch from "../../Components/Switch/Switch";
 import { useSelector } from "react-redux";
 
 function HomePage() {
-  let store = useSelector((store) => store.reducers.forecast);
+  let store = useSelector((store) => store.reducers);
 
   return (
     <div className={style.P}>
