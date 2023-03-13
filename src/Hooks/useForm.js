@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getForecastData, updateQData } from "../Store/Reducers";
+import { getForecastData, setLoader, updateQData } from "../Store/Reducers";
 
 
 function useForm() {
@@ -19,10 +19,15 @@ function useForm() {
     };
     let Submit = async () => {
         dispatch(updateQData(userInput));
+        dispatch(setLoader(true))
         if (store.tempInC) {
-            dispatch(getForecastData({ userInput: userInput, unit: 'metric' }));
+            dispatch(getForecastData({ userInput: userInput, unit: 'metric' })).then(()=>{
+                dispatch(setLoader(false))
+            });
         } else {
-            dispatch(getForecastData({ userInput: userInput, unit: 'imperial' }));
+            dispatch(getForecastData({ userInput: userInput, unit: 'imperial' })).then(()=>{
+                dispatch(setLoader(false))
+            });
         }
     };
     return {

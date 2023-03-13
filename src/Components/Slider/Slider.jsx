@@ -43,10 +43,14 @@ export default class SimpleSlider extends Component {
                 <p>{forecast.dt_txt}</p>
                 <img className={style.img} alt="img" src={img} />
                 <p>
-                  <span>{this.props.data.forecast.city.name}, {this.props.data.forecast.city.country}</span>
+                  <span>
+                    {this.props.data.forecast.city.name},{" "}
+                    {this.props.data.forecast.city.country}
+                  </span>
                 </p>
                 <p>
-                  <span>Temp</span> {forecast.main.temp_max} {this.props.data.tempInC?'°C':'°F'}
+                  <span>Temp</span> {forecast.main.temp_max}{" "}
+                  {this.props.data.tempInC ? "°C" : "°F"}
                 </p>
                 <p>
                   <span>{forecast.weather[0].description}</span>

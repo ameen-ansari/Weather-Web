@@ -1,7 +1,8 @@
 .P {
-  background: #1b262c;
   padding: 2rem 0px;
   width: 100%;
+  position: relative;
+  background-image: url(../../Images/Weather\ website\ &\ Dark\ Weather\ \(Community\).svg);
 }
 
 .P > p:nth-child(2) {
