@@ -35,3 +35,9 @@ function App() {
 }
 
 export default App;
+// sun
+// https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Status-weather-clear-icon.png
+
+// sun + clouds
+// https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Status-weather-clouds-icon.png
+// https://icons.iconarchive.com/icons/jackietran/cloud/64/cloud-sun-icon.png

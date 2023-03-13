@@ -23,6 +23,9 @@
   color: white;
 }
 
+.P > div:nth-child(2) > p:nth-child(1) {
+  border-bottom: 2px solid white;
+}
 .P > div:nth-child(2) {
   display: flex;
   justify-content: center;

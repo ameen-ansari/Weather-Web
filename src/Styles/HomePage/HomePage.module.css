@@ -3,6 +3,13 @@
   width: 100%;
   position: relative;
   background-image: url(../../Images/Weather\ website\ &\ Dark\ Weather\ \(Community\).svg);
+  background-size: cover;
+}
+
+@media (min-width:750px) {
+  .P{
+    min-height:100vh ;
+  }
 }
 
 .P > p:nth-child(2) {

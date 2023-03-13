@@ -1,9 +1,11 @@
 import Button from "../Button/Button";
 import style from "../../Styles/Form/Form.module.css";
 import useForm from "../../Hooks/useForm";
+import { useSelector } from "react-redux";
 
 function Form() {
   const { inputH, Submit, userInput } = useForm();
+  let store = useSelector((store) => store);
   return (
     <div className={style.P1}>
       <div className={style.P2}>

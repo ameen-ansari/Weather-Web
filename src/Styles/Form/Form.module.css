@@ -16,6 +16,10 @@
   .P2 {
     flex-direction: column;
   }
+  .P2 input {
+    width: 80%;  
+    margin: auto;
+  }
 }
 
 .P2 input {

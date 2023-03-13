@@ -4,18 +4,13 @@ import { combineReducers } from "redux";
 
 export let getForecastData = createAsyncThunk('web/getData', async ({ userInput, unit }) => {
   try {
-    // let dispatch = useDispatch()
     let getResponse = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${userInput.country},${userInput.city}&units=${unit}&appid=73e6239d34fb2189a11ecddcd2f211e5`
       )
       let forecast = await getResponse.json()
-      // dispatch(setLoader(true))
     return forecast
   } catch (error) {
     alert(error)
-  }
-  finally {
-    // dispatch(setLoader(false))
   }
 })
 

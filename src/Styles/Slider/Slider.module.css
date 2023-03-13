@@ -1,6 +1,6 @@
 .parent {
   width: 80%;
-  margin:8rem auto !important;
+  margin:5rem auto !important;
 }
 
 .card {
@@ -20,8 +20,10 @@
 }
 
 .card > img {
-  width: 60%;
+  width: 60% !important;
   align-self: center;
+  border-radius: 12px;
+  height: 100px !important;
 }
 
 .card span {
