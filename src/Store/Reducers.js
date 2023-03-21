@@ -1,11 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
 import { combineReducers } from "redux";
 
 export let getForecastData = createAsyncThunk('web/getData', async ({ userInput, unit }) => {
   try {
     let getResponse = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${userInput.country},${userInput.city}&units=${unit}&appid=73e6239d34fb2189a11ecddcd2f211e5`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${userInput.country},${userInput.city}&units=${unit}&appid=${process.env.REACT_APP_API_KEY}`
       )
       let forecast = await getResponse.json()
     return forecast

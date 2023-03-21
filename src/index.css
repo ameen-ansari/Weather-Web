@@ -7,8 +7,3 @@
 button {
   cursor: pointer;
 }
-
-button:hover {
-  opacity: 5 !important;
-  background-color: antiquewhite;
-}
