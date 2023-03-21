@@ -65,10 +65,11 @@ export default class SimpleSlider extends Component {
                 ) : (
                   <img className={style.img} alt="img" src={img} />
                 )}
+
                 <p>
                   <span>
-                    {this.props.data.forecast.city.name},{" "}
-                    {this.props.data.forecast.city.country}
+                    {this.props.data.searchQ.country}{" , "}
+                    {this.props.data.searchQ.city}
                   </span>
                 </p>
                 <p>

@@ -18,7 +18,7 @@ function HomePage() {
       </p>
       <Switch />
       <Form />
-      <SimpleSlider data={store} />
+      <SimpleSlider data={store}  />
     </div>
   );
 }
